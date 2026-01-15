@@ -527,17 +527,24 @@
         const modalClose = document.querySelector('.modal-close');
         const clickableImages = document.querySelectorAll('.clickable-image');
 
+        console.log('Found clickable images:', clickableImages.length);
+
         // Open modal on image click
-        clickableImages.forEach(img => {
+        clickableImages.forEach((img, index) => {
+            console.log('Adding click listener to image', index);
             img.addEventListener('click', function(e) {
+                console.log('Image clicked:', this.src);
+                e.preventDefault();
                 e.stopPropagation();
                 let imageSrc = this.src;
                 // Remove cache-buster query parameter for modal display
                 imageSrc = imageSrc.split('?')[0];
+                console.log('Setting modal image src to:', imageSrc);
                 modalImage.src = imageSrc;
                 modalImage.alt = this.alt;
                 imageModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
+                console.log('Modal opened');
             });
         });
 
