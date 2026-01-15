@@ -864,10 +864,12 @@ h4 {
     font-weight: 500;
     letter-spacing: 0.02em;
     white-space: nowrap;
-    opacity: 0;
-    transform: translateX(-10px);
+    opacity: 1;
+    transform: translateX(0);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
+    pointer-events: auto;
+    color: var(--color-text-secondary);
+    cursor: pointer;
 }
 
 /* Hover state */
@@ -917,6 +919,7 @@ h4 {
 .side-nav-container:hover .side-nav-label {
     opacity: 1;
     transform: translateX(0);
+    color: var(--color-cyan);
 }
 
 /* Progress line connecting dots */
