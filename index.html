@@ -72,7 +72,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">Built for OpenStack</div>
-                <h1>One API to Orchestrate <span class="gradient-text">Kubernetes and VMs</span> Across OpenStack</h1>
+                <h1>One API to Orchestrate <span class="gradient-text">Kubernetes, VMs and More...</span> Across OpenStack</h1>
                 <p class="hero-subtitle">EdgeContinuum unifies lifecycle management for Kubernetes clusters, virtual machines, and infrastructure resources in your OpenStack clouds</p>
                 <div class="hero-cta">
                     <a href="#openstack" class="btn btn-primary">See How It Works</a>
@@ -529,8 +529,12 @@
 
         // Open modal on image click
         clickableImages.forEach(img => {
-            img.addEventListener('click', function() {
-                modalImage.src = this.src;
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                let imageSrc = this.src;
+                // Remove cache-buster query parameter for modal display
+                imageSrc = imageSrc.split('?')[0];
+                modalImage.src = imageSrc;
                 modalImage.alt = this.alt;
                 imageModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
