@@ -1082,3 +1082,99 @@ h4 {
         font-size: 28px;
     }
 }
+
+
+/* ===== Image Overlay & Click to Enlarge Indicator ===== */
+.visual-showcase {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: var(--radius-md);
+    z-index: 10;
+}
+
+.deployment-model:hover .image-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.deployment-model:hover .overlay-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.zoom-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-cyan);
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+    animation: zoom-pulse 2s ease-in-out infinite;
+}
+
+.overlay-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes zoom-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.clickable-image {
+    cursor: zoom-in;
+}
+
+/* Mobile responsive overlay */
+@media (max-width: 768px) {
+    .image-overlay {
+        opacity: 0.7;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .overlay-content {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+    
+    .zoom-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .overlay-text {
+        font-size: 0.9rem;
+    }
+}
