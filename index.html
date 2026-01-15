@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdgeContinuum - The OpenStack Management Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-brand">EdgeContinuum</a>
+            <div class="nav-links">
+                <a href="#openstack">OpenStack</a>
+                <a href="#services">Services</a>
+                <a href="#platform">Platform</a>
+                <a href="#security">Security</a>
+                <a href="https://apidocs.edgecontinuum.com" class="btn btn-nav">API Docs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero - OpenStack First -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Built for OpenStack</div>
+                <h1>One API to Manage All Your <span class="gradient-text">OpenStack Clusters</span></h1>
+                <p class="hero-subtitle">Whether you're running shared infrastructure or private deployments, EdgeContinuum gives you a unified API to orchestrate Kubernetes, VMs, and infrastructure across all your OpenStack clusters.</p>
+                <div class="hero-cta">
+                    <a href="#openstack" class="btn btn-primary">See How It Works</a>
+                    <a href="https://apidocs.edgecontinuum.com" class="btn btn-secondary">View API Docs</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="01_platform_architecture.png" alt="EdgeContinuum Platform Architecture - Unified API connecting MKS, MVMS, Infrastructure, and Global Regions" class="visual-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: OpenStack Infrastructure - LEAD FEATURE -->
+    <section id="openstack" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">OpenStack Native</span>
+                <h2>Manage Multiple <span class="gradient-text">OpenStack Clusters</span> From One Place</h2>
+                <p>Connect your shared and private OpenStack deployments to a single control plane. No more jumping between Horizon dashboards—manage everything through one powerful API.</p>
+            </div>
+            <div class="visual-showcase visual-large">
+                <img src="04_infrastructure.png" alt="Multi-Cluster OpenStack Infrastructure - cluster management, profiles, credentials, health monitoring" class="visual-image">
+            </div>
+            <div class="features-inline">
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Connect multiple OpenStack clusters</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Shared & private deployments</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Unified credential management</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Infrastructure profiles</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Cross-cluster health monitoring</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>DNS & load balancer support</span>
+                </div>
+            </div>
+            <div class="endpoint-badge-center">
+                <span class="endpoint-count">13</span> API Endpoints
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Why EdgeContinuum for OpenStack Users -->
+    <section id="why" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Why EdgeContinuum</span>
+                <h2>Built for <span class="gradient-text">OpenStack Teams</span></h2>
+                <p>Whether you're an experienced OpenStack operator or just getting started, EdgeContinuum simplifies infrastructure management</p>
+            </div>
+            <div class="visual-showcase">
+                <img src="08_value_propositions.png" alt="EdgeContinuum Value Propositions - Single API, Multi-Cluster, Enterprise Security, Kubernetes Native, Global Scale, Developer First" class="visual-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Managed Kubernetes on OpenStack -->
+    <section id="services" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Kubernetes on OpenStack</span>
+                <h2>Deploy Managed Kubernetes <span class="gradient-text">Across Your Clusters</span></h2>
+                <p>Spin up Kubernetes clusters on any of your connected OpenStack deployments with full lifecycle management, auto-scaling node pools, and real-time health monitoring</p>
+            </div>
+            <div class="visual-showcase visual-large">
+                <img src="02_kubernetes_mks.png" alt="Managed Kubernetes Service (MKS) - Cluster management, node pools, health monitoring" class="visual-image">
+            </div>
+            <div class="features-inline">
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Cluster lifecycle management</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Dynamic node pool scaling</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Real-time health monitoring</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Kubeconfig access</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Deploy to any cluster</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Edge-native optimization</span>
+                </div>
+            </div>
+            <div class="endpoint-badge-center">
+                <span class="endpoint-count">15</span> API Endpoints
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Virtual Machines on OpenStack -->
+    <section id="vms" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">VMs on OpenStack</span>
+                <h2>Provision Virtual Machines <span class="gradient-text">With Modern Tooling</span></h2>
+                <p>Launch and manage VMs across your OpenStack clusters with cloud-init automation, per-instance firewalls, and comprehensive monitoring</p>
+            </div>
+            <div class="visual-showcase visual-large">
+                <img src="03_vm_mvms.png" alt="Managed Virtual Machine Service (MVMS) - Instance management, cloud-init, firewall rules" class="visual-image">
+            </div>
+            <div class="features-inline">
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Instance provisioning</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Cloud-init automation</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Per-instance firewall</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Flexible flavors & images</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Health status monitoring</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Cross-cluster deployment</span>
+                </div>
+            </div>
+            <div class="endpoint-badge-center">
+                <span class="endpoint-count">9</span> API Endpoints
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: API Platform -->
+    <section id="platform" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">API-First Design</span>
+                <h2>Complete API Ecosystem with <span class="gradient-text">64 RESTful Endpoints</span></h2>
+                <p>Two powerful services working together to give you complete programmatic control over your OpenStack infrastructure</p>
+            </div>
+            <div class="visual-showcase">
+                <img src="07_api_overview.png" alt="EdgeContinuum API-First Platform - IAM Service and REX API with 64 endpoints" class="visual-image">
+            </div>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-number">64</span>
+                    <span class="stat-label">API Endpoints</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Core Services</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">RESTful</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Availability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Enterprise IAM & Security -->
+    <section id="security" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Security & Access</span>
+                <h2>Enterprise-Grade <span class="gradient-text">Identity Management</span></h2>
+                <p>Secure your OpenStack infrastructure with organizations, projects, role-based access control, and fine-grained permissions</p>
+            </div>
+            <div class="visual-showcase visual-large">
+                <img src="05_iam_security.png" alt="Enterprise IAM & Security - Organizations, projects, users, groups, RBAC" class="visual-image">
+            </div>
+            <div class="features-inline">
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Multi-tenant organizations</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Project isolation</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Users & groups</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Role-based access control</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Fine-grained permissions</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Audit logging</span>
+                </div>
+            </div>
+            <div class="endpoint-badge-center">
+                <span class="endpoint-count">17+</span> API Endpoints
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Global Regions & Zones -->
+    <section id="regions" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Geographic Distribution</span>
+                <h2>Deploy Across <span class="gradient-text">Regions & Zones</span></h2>
+                <p>Organize your OpenStack clusters by geographic region and availability zone for low-latency edge deployments</p>
+            </div>
+            <div class="visual-showcase visual-large">
+                <img src="06_regions_zones.png" alt="Global Edge Regions & Zones - Geographic distribution, availability zones, low latency" class="visual-image">
+            </div>
+            <div class="features-inline">
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Geographic regions</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Availability zones</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Low-latency edge</span>
+                </div>
+                <div class="feature-inline-item">
+                    <span class="feature-check">✓</span>
+                    <span>Distributed compute</span>
+                </div>
+            </div>
+            <div class="endpoint-badge-center">
+                <span class="endpoint-count">10</span> API Endpoints
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Simplify Your OpenStack Management?</h2>
+                <p>Start managing all your OpenStack clusters with a single, powerful API</p>
+                <div class="cta-buttons">
+                    <a href="https://apidocs.edgecontinuum.com" class="btn btn-primary btn-large">Explore the API</a>
+                    <a href="#" class="btn btn-outline btn-large">Contact Sales</a>
+                </div>
+                <div class="api-endpoint">
+                    <code>https://api.edgecontinuum.com</code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>EdgeContinuum</h3>
+                    <p>The OpenStack Management Platform</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <a href="#openstack">OpenStack</a>
+                        <a href="#services">Kubernetes</a>
+                        <a href="#vms">Virtual Machines</a>
+                        <a href="#security">IAM & Security</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Developers</h4>
+                        <a href="https://apidocs.edgecontinuum.com">API Documentation</a>
+                        <a href="#">SDKs & Libraries</a>
+                        <a href="#">Changelog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EdgeContinuum. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
