@@ -346,10 +346,18 @@
                 <h2>How Can You Deploy <span class="gradient-text">EdgeContinuum?</span></h2>
                 <p>Choose the deployment model that fits your organization's needs—manage it yourself or let us handle it for you</p>
             </div>
+            <!-- Image Enlarge Modal -->
+            <div id="imageModal" class="image-modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <img id="modalImage" src="" alt="Enlarged deployment diagram" class="modal-image">
+                </div>
+            </div>
+
             <div class="deployment-models">
                 <div class="deployment-model">
                     <div class="visual-showcase">
-                        <img src="deployment_onprem.jpg" alt="On-Prem Deployment - Managed by Customer" class="visual-image">
+                        <img src="deployment_onprem.jpg" alt="On-Prem Deployment - Managed by Customer" class="visual-image clickable-image" data-enlargeable="true">
                     </div>
                     <div class="deployment-info">
                         <h3>On-Prem</h3>
@@ -363,7 +371,7 @@
                 </div>
                 <div class="deployment-model">
                     <div class="visual-showcase">
-                        <img src="deployment_saas.jpg" alt="SaaS Deployment - Managed by EdgeContinuum" class="visual-image">
+                        <img src="deployment_saas.jpg" alt="SaaS Deployment - Managed by EdgeContinuum" class="visual-image clickable-image" data-enlargeable="true">
                     </div>
                     <div class="deployment-info">
                         <h3>SaaS</h3>
@@ -481,6 +489,44 @@
                 const targetSection = document.querySelector(targetId);
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             });
+        });
+
+        // Image modal functionality
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.querySelector('.modal-close');
+        const clickableImages = document.querySelectorAll('.clickable-image');
+
+        // Open modal on image click
+        clickableImages.forEach(img => {
+            img.addEventListener('click', function() {
+                modalImage.src = this.src;
+                modalImage.alt = this.alt;
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close modal on close button click
+        modalClose.addEventListener('click', function() {
+            imageModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal on background click
+        imageModal.addEventListener('click', function(e) {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
