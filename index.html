@@ -24,6 +24,48 @@
         </div>
     </nav>
 
+    <!-- Side Navigation -->
+    <nav class="side-nav">
+        <div class="side-nav-container">
+            <a href="#hero" class="side-nav-item active" data-section="hero">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">Home</span>
+            </a>
+            <a href="#openstack" class="side-nav-item" data-section="openstack">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">OpenStack</span>
+            </a>
+            <a href="#why" class="side-nav-item" data-section="why">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">Why EC</span>
+            </a>
+            <a href="#services" class="side-nav-item" data-section="services">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">Kubernetes</span>
+            </a>
+            <a href="#vms" class="side-nav-item" data-section="vms">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">VMs</span>
+            </a>
+            <a href="#platform" class="side-nav-item" data-section="platform">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">API</span>
+            </a>
+            <a href="#security" class="side-nav-item" data-section="security">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">Security</span>
+            </a>
+            <a href="#regions" class="side-nav-item" data-section="regions">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">Regions</span>
+            </a>
+            <a href="#deployment" class="side-nav-item" data-section="deployment">
+                <span class="side-nav-dot"></span>
+                <span class="side-nav-label">Deploy</span>
+            </a>
+        </div>
+    </nav>
+
     <!-- Section 1: Hero - OpenStack First -->
     <section id="hero" class="hero">
         <div class="container">
@@ -402,6 +444,42 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Side navigation scroll tracking
+        const sideNavItems = document.querySelectorAll('.side-nav-item');
+        const sections = document.querySelectorAll('section[id]');
+
+        function updateSideNav() {
+            const scrollPos = window.scrollY + window.innerHeight / 3;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    sideNavItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('data-section') === sectionId) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateSideNav);
+        updateSideNav();
+
+        // Smooth scroll for side nav clicks
+        sideNavItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
         });
     </script>
 </body>
