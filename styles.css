@@ -267,9 +267,6 @@ h4 {
     display: block;
     object-fit: cover;
     mix-blend-mode: lighten;
-    /* Soft feathered edges */
-    -webkit-mask-image: radial-gradient(ellipse 95% 90% at center, black 70%, transparent 100%);
-    mask-image: radial-gradient(ellipse 95% 90% at center, black 70%, transparent 100%);
 }
 
 /* ===== Sections ===== */
