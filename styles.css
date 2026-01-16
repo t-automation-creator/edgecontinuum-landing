@@ -256,12 +256,16 @@ h4 {
 /* Hero visual - no box, flows naturally */
 .hero-visual {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
 }
 
-.hero-visual img {
+.hero-visual img,
+.hero-visual video {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
     mix-blend-mode: lighten;
     /* Soft feathered edges */
     -webkit-mask-image: radial-gradient(ellipse 95% 90% at center, black 70%, transparent 100%);
